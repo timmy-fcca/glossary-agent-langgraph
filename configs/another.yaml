@@ -1,0 +1,18 @@
+model_args:
+  model: "qwen2.5:32b"
+  api_key: "Fcca@118010142"
+  openai_api_base: "http://10.71.20.11:8010/v1"
+  temperature: 0
+
+data_path: "./data/wiki_data"
+workflow: "another"
+max_case: 1
+max_concurrency: 10
+preprocess_fn: "reg"
+
+# parsing
+del_keys:
+  - external_args
+  - detected_abbr
+  - current_abbr
+  - replacement

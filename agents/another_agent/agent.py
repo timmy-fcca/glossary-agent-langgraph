@@ -4,7 +4,7 @@ from langgraph.graph import END, START, StateGraph
 from agents.another_agent import nodes, states
 
 
-def build_workflow(config):
+def build_workflow(config: dict):
     all_nodes = nodes.Nodes(config)
     workflow = StateGraph(
         states.InternalState, input=states.ValidateState, output=states.OutputState

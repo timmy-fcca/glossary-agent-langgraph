@@ -1,8 +1,3 @@
-# pre-commit hooks
-black
-flake8
-isort
-
 langchain-openai
 langchain_core
 langgraph

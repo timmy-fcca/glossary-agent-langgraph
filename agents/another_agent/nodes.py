@@ -1,5 +1,3 @@
-from typing import Dict
-
 from langchain_core.messages import HumanMessage, SystemMessage
 from langchain_openai import ChatOpenAI
 
@@ -9,7 +7,7 @@ from agents.another_agent.prompts import get_prompt
 
 class Nodes:
 
-    def __init__(self, model_args: Dict[str, str]) -> None:
+    def __init__(self, model_args: dict[str, str]) -> None:
         self.model = ChatOpenAI(**model_args)
 
     def validate_node(self, state: states.ValidateState) -> states.OutputState:
@@ -19,7 +17,3 @@ class Nodes:
         )
 
         return {"response": response.content, "inputs": state}
-
-
-# def validate_node(state: states.ValidateState) -> states.OutputState:
-#     return {"response": "test", "inputs": state}
